@@ -71,8 +71,8 @@ fig = px.choropleth(df_cont,
                     hover_data=['percentage_of_population_owns_4_wheelers'])
 fig.update_geos(fitbounds="locations",visible=False)
 
-dataset = dataset.split(".")[1]
+dataset = dataset.split(".")[0]
 fig.write_html("state-level-{}-{}.html".format(dataset,choice))
-print("\nthe output html has been written to the current directory\nopen {}-{}.html in a browser to view your output".format(dataset,choice))
+print("\nthe output html has been written to the current directory\nopen state-level-{}-{}.html in a browser to view your output".format(dataset,choice))
 
 

@@ -66,6 +66,7 @@ fig = px.choropleth(df,
                     hover_data=[choice])
 fig.update_geos(fitbounds="locations",visible=False)
 
-fig.write_html("{}-{}.html".format(dataset,choice))
-print("\nthe output html has been written to the current directory\nopen {}-{}.html in a browser to view your output".format(dataset,choice))
+dataset = dataset.split(".")[0]
+fig.write_html("district-level-{}-{}.html".format(dataset,choice))
+print("\nthe output html has been written to the current directory\nopen district-level-{}-{}.html in a browser to view your output".format(dataset,choice))
 
