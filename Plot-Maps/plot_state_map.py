@@ -66,9 +66,9 @@ print("processing......")
 fig = px.choropleth(df_cont,
                     locations='id',
                     geojson=states_geo,
-                    color='percentage_of_population_owns_4_wheelers',
+                    color=choice,
                     hover_name='state',
-                    hover_data=['percentage_of_population_owns_4_wheelers'])
+                    hover_data=[choice])
 fig.update_geos(fitbounds="locations",visible=False)
 
 dataset = dataset.split(".")[0]
